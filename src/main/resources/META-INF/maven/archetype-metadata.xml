@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="jahia-module-archetype">
+    <fileSets>
+        <fileSet filtered="true">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.cnd</include>
+                <include>**/*.png</include>
+                <include>**/*.jsp</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/main/typescript</directory>
+            <includes>
+                <include>**/*.png</include>
+                <include>**/*.html</include>
+                <include>**/*.ts</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory></directory>
+            <includes>
+                <include>.babelrc</include>
+                <include>.gitignore</include>
+                <include>README.md</include>
+                <include>gulpfile.js</include>
+                <include>karma.conf.js</include>
+                <include>package.json</include>
+                <include>tsconfig.json</include>
+                <include>webpack.config.js</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <requiredProperties>
+        <requiredProperty key="artifactId">
+            <defaultValue>dx-module</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="moduleName">
+            <defaultValue>DX Module</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="groupId">
+            <defaultValue>org.jahia.modules</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="digitalFactoryVersion">
+            <defaultValue>7.3.0.0</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="version">
+            <defaultValue>1.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+</archetype-descriptor>
